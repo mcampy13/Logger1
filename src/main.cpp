@@ -84,6 +84,9 @@ MainWindow::MainWindow(Logger * logger)
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(timerCallback()));
     timer->start(15);
+    
+
+	
 
 #ifdef unix
     char * homeDir = getenv("HOME");
@@ -297,3 +300,9 @@ void MainWindow::timerCallback()
     depthLabel->setPixmap(QPixmap::fromImage(depthImage));
     imageLabel->setPixmap(QPixmap::fromImage(rgbImage));
 }
+
+//Additional class by Matt Campagnola for handling key presses
+void MainWindow::keyPressEvent(QKeyEvent* kEvent){
+	recordToggle();
+}
+

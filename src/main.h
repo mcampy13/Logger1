@@ -28,6 +28,13 @@
 #include <QFileDialog>
 #include <QPainter>
 
+//Added by Matt 3/17/17
+#include <QKeyEvent>  
+#include <QEvent>
+#include <QInputEvent>
+//End additional section
+
+
 #include <locale>
 #include <string>
 #include <iostream>
@@ -57,6 +64,7 @@ class MainWindow : public QWidget
         void quit();
         void fileBrowse();
         void dateFilename();
+        void keyPressEvent(QKeyEvent*);
 
     private:
         Logger * logger;
