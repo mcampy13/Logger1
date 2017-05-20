@@ -11,6 +11,8 @@ Uses OpenNI 1.x.
 
 The binary format is specified in Logger::writeData() in Logger.cpp
 
+**Edit 3/20/17** Added feature to toggle recording using a keypress event.
+
 <p align="center">
   <img src="http://mp3guy.github.io/img/Logger1.png" alt="Logger1"/>
 </p>
